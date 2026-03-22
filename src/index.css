@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Newsreader", serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+
+  --color-deep-teal: #004d4d;
+  --color-burnt-orange: #cc5500;
+  --color-avocado-green: #568203;
+  --color-warm-ochre: #cc7722;
+  --color-mcm-beige: #f5f2e8;
+  --color-mcm-dark: #1a1a1a;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-mcm-beige);
+    color: var(--color-mcm-dark);
+  }
+}
+
+.mcm-shadow {
+  box-shadow: 12px 12px 0px 0px rgba(0, 77, 77, 0.1);
+}
+
+.btn-mcm {
+  @apply transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+}
